@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/
+ScheduledDeliveryWebApplication/.flaskenv
+ScheduledDeliveryWebApplication/__pycache__/
+ScheduledDeliveryWebApplication/app.db
+ScheduledDeliveryWebApplication/app/__pycache__/
+ScheduledDeliveryWebApplication/app/models/__pycache__/
+ScheduledDeliveryWebApplication/venv/
