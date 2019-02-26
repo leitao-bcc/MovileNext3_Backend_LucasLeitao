@@ -1,5 +1,8 @@
 from app import db
 from app.models.base import BaseModel
+from app.validators.none_or_empty_validator import is_none_or_empty
+from app.validators.string_format_validator import is_float
+from app.validators.rating_validator import is_valid_rating
 
 merchant_phones = db.Table('merchant_phones',
                            db.Column('merchant_id',
@@ -32,6 +35,24 @@ class MerchantModel(db.Model, BaseModel):
     phones = db.relationship('PhoneModel',
                              secondary=merchant_phones,
                              lazy='subquery')
+
+    def __init__(self, name, description, rating):
+        if is_none_or_empty(name):
+            raise ValueError("Merchant Name {}".format(name))
+
+        if is_none_or_empty(description):
+            raise ValueError("Merchant Description {}".format(description))
+
+        if not is_float(rating):
+            raise ValueError("Merchant Rating {}".format(rating))
+
+        rating = float(rating)
+        if not is_valid_rating(rating):
+            raise ValueError("Merchant Rating {}".format(rating))
+
+        self.name = name
+        self.description = description
+        self.rating = rating
 
     def __repr__(self):
         return "<MerchantModel %r>" % self.name

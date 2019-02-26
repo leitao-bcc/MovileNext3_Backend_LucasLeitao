@@ -1,5 +1,7 @@
+from datetime import datetime
 from app import db
 from app.models.base import BaseModel
+from app.validators.datetime_validator import is_valid_datetime_format
 
 
 class OrderModel(db.Model, BaseModel):
@@ -21,6 +23,13 @@ class OrderModel(db.Model, BaseModel):
 
     created_at = db.Column(db.DateTime, nullable=False)
     deliveryDateTime = db.Column(db.DateTime, nullable=False)
+
+    def __init__(self, delivery_datetime):
+        if not is_valid_datetime_format(delivery_datetime):
+            raise ValueError("Order DeliveryDatetime {}".format(delivery_datetime))
+
+        self.deliveryDateTime = delivery_datetime
+        self.created_at = datetime.now()
 
     def __repr__(self):
         return "<OrderModel %r>" % self.id

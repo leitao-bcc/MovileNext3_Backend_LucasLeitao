@@ -1,5 +1,9 @@
 from app import db
 from app.models.base import BaseModel
+from app.validators.none_or_empty_validator import is_none_or_empty
+from app.validators.cep_validator import is_valid_cep
+from app.validators.string_format_validator import is_float
+from app.validators.coordinates_validator import is_valid_latitude, is_valid_longitude
 
 
 class AddressModel(db.Model, BaseModel):
@@ -16,6 +20,52 @@ class AddressModel(db.Model, BaseModel):
     complement = db.Column(db.String(45))
     latitude = db.Column(db.Float(precision="3,9"), nullable=False)
     longitude = db.Column(db.Float(precision="3,9"), nullable=False)
+
+    def __init__(self, country, state, city, neighborhood, street_name, street_number, postal_code, complement,
+                 latitude, longitude):
+
+        if is_none_or_empty(country):
+            raise ValueError("Address Country {}".format(country))
+
+        if is_none_or_empty(state):
+            raise ValueError("Address State {}".format(state))
+
+        if is_none_or_empty(city):
+            raise ValueError("Address City {}".format(city))
+
+        if is_none_or_empty(neighborhood):
+            raise ValueError("Address Neighborhood {}".format(neighborhood))
+
+        if is_none_or_empty(street_name):
+            raise ValueError("Address StreetName {}".format(street_name))
+
+        if not is_valid_cep(postal_code):
+            raise ValueError("Address PostalCode {}".format(postal_code))
+
+        if not is_float(latitude):
+            raise ValueError("Address Latitude {}".format(latitude))
+
+        latitude = float(latitude)
+        if not is_valid_latitude(latitude):
+            raise ValueError("Address Latitude {}".format(latitude))
+
+        if not is_float(longitude):
+            raise ValueError("Address Longitude {}".format(longitude))
+
+        longitude = float(longitude)
+        if not is_valid_longitude(longitude):
+            raise ValueError("Address Longitude {}".format(longitude))
+
+        self.country = country
+        self.state = state
+        self.city = city
+        self.neighborhood = neighborhood
+        self.streetName = street_name
+        self.streetNumber = street_number
+        self.postalCode = postal_code
+        self.complement = complement
+        self.latitude = latitude
+        self.longitude = longitude
 
     def __repr__(self):
         return "<AddressModel %r>" % self.streetName
