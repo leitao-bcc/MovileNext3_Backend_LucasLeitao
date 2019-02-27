@@ -1,8 +1,8 @@
 from app import db
-from app.models.base import BaseModel
+from app.models.base_model import BaseModel
 from app.validators.none_or_empty_validator import is_none_or_empty
-from app.validators.string_format_validator import is_float
 from app.validators.rating_validator import is_valid_rating
+from app.validators.string_format_validator import is_float
 
 merchant_phones = db.Table('merchant_phones',
                            db.Column('merchant_id',

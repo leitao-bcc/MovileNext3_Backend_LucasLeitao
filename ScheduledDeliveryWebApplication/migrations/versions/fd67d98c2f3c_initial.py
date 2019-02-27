@@ -1,15 +1,15 @@
 """initial
 
-Revision ID: 1387350f3b74
+Revision ID: fd67d98c2f3c
 Revises: 
-Create Date: 2019-02-25 23:01:09.249295
+Create Date: 2019-02-26 23:05:25.689665
 
 """
 import sqlalchemy as sa
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision = '1387350f3b74'
+revision = 'fd67d98c2f3c'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -24,11 +24,11 @@ def upgrade():
                     sa.Column('city', sa.String(length=45), nullable=False),
                     sa.Column('neighborhood', sa.String(length=45),
                               nullable=False),
-                    sa.Column('streetName', sa.String(length=90),
+                    sa.Column('street_name', sa.String(length=90),
                               nullable=False),
-                    sa.Column('streetNumber', sa.String(length=10),
+                    sa.Column('street_number', sa.String(length=10),
                               nullable=True),
-                    sa.Column('postalCode', sa.String(length=10),
+                    sa.Column('postal_code', sa.String(length=10),
                               nullable=False),
                     sa.Column('complement', sa.String(length=45),
                               nullable=True),
@@ -52,7 +52,7 @@ def upgrade():
     op.create_table('customers',
                     sa.Column('id', sa.Integer(), nullable=False),
                     sa.Column('name', sa.String(length=45), nullable=False),
-                    sa.Column('taxPayerIdentificationNumber',
+                    sa.Column('tax_payer_identification_number',
                               sa.String(length=20), nullable=False),
                     sa.Column('email', sa.String(length=45), nullable=False),
                     sa.Column('phone_id', sa.Integer(), nullable=False),
@@ -107,7 +107,7 @@ def upgrade():
                     sa.Column('merchant_id', sa.Integer(), nullable=False),
                     sa.Column('address_id', sa.Integer(), nullable=False),
                     sa.Column('created_at', sa.DateTime(), nullable=False),
-                    sa.Column('deliveryDateTime', sa.DateTime(),
+                    sa.Column('delivery_date_time', sa.DateTime(),
                               nullable=False),
                     sa.ForeignKeyConstraint(['address_id'],
                                             ['addresses.id'], ),

@@ -1,7 +1,7 @@
 from app import db
-from app.models.base import BaseModel
-from app.validators.string_format_validator import is_integer
+from app.models.base_model import BaseModel
 from app.validators.phone_validator import is_valid_ddd, is_valid_phone_number
+from app.validators.string_format_validator import is_integer
 
 
 class PhoneModel(db.Model, BaseModel):

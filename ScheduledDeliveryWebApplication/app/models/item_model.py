@@ -1,5 +1,5 @@
 from app import db
-from app.models.base import BaseModel
+from app.models.base_model import BaseModel
 from app.validators.none_or_empty_validator import is_none_or_empty
 from app.validators.string_format_validator import is_integer
 
@@ -26,7 +26,8 @@ class ItemModel(db.Model, BaseModel):
 
         price = int(price)
         if price < 0:
-            raise ValueError("Item Price must be greater than 0, {}".format(price))
+            raise ValueError(
+                "Item Price must be greater than 0, {}".format(price))
 
         if is_none_or_empty(section):
             raise ValueError("Item Section {}".format(section))

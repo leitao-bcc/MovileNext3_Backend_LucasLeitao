@@ -1,6 +1,7 @@
 from app import db
-from app.models.base import BaseModel
-from app.validators.datetime_validator import is_valid_week_day, is_valid_time_format
+from app.models.base_model import BaseModel
+from app.validators.datetime_validator import is_valid_week_day, \
+    is_valid_time_format
 
 
 class OfficeHourModel(db.Model, BaseModel):
@@ -27,12 +28,13 @@ class OfficeHourModel(db.Model, BaseModel):
             raise ValueError("OfficeHour EndTime {}".format(end_time))
 
         if start_time > end_time:
-            raise ValueError("OfficeHour EndTime must be greater than StartTime {} - {}".format(start_time, end_time))
+            raise ValueError(
+                "OfficeHour EndTime must be greater than StartTime {} - {}".format(
+                    start_time, end_time))
 
         self.week_day = week_day
         self.start_time = start_time
         self.end_time = end_time
-
 
     def __repr__(self):
         return "<OfficeHourModel %r>" % self.merchant.name

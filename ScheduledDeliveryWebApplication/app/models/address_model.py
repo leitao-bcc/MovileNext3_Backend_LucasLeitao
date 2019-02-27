@@ -1,9 +1,10 @@
 from app import db
-from app.models.base import BaseModel
-from app.validators.none_or_empty_validator import is_none_or_empty
+from app.models.base_model import BaseModel
 from app.validators.cep_validator import is_valid_cep
+from app.validators.coordinates_validator import is_valid_latitude, \
+    is_valid_longitude
+from app.validators.none_or_empty_validator import is_none_or_empty
 from app.validators.string_format_validator import is_float
-from app.validators.coordinates_validator import is_valid_latitude, is_valid_longitude
 
 
 class AddressModel(db.Model, BaseModel):
@@ -14,14 +15,15 @@ class AddressModel(db.Model, BaseModel):
     state = db.Column(db.String(45), nullable=False)
     city = db.Column(db.String(45), nullable=False)
     neighborhood = db.Column(db.String(45), nullable=False)
-    streetName = db.Column(db.String(90), nullable=False)
-    streetNumber = db.Column(db.String(10))
-    postalCode = db.Column(db.String(10), nullable=False)
+    street_name = db.Column(db.String(90), nullable=False)
+    street_number = db.Column(db.String(10))
+    postal_code = db.Column(db.String(10), nullable=False)
     complement = db.Column(db.String(45))
     latitude = db.Column(db.Float(precision="3,9"), nullable=False)
     longitude = db.Column(db.Float(precision="3,9"), nullable=False)
 
-    def __init__(self, country, state, city, neighborhood, street_name, street_number, postal_code, complement,
+    def __init__(self, country, state, city, neighborhood, street_name,
+                 street_number, postal_code, complement,
                  latitude, longitude):
 
         if is_none_or_empty(country):
@@ -60,12 +62,12 @@ class AddressModel(db.Model, BaseModel):
         self.state = state
         self.city = city
         self.neighborhood = neighborhood
-        self.streetName = street_name
-        self.streetNumber = street_number
-        self.postalCode = postal_code
+        self.street_name = street_name
+        self.street_number = street_number
+        self.postal_code = postal_code
         self.complement = complement
         self.latitude = latitude
         self.longitude = longitude
 
     def __repr__(self):
-        return "<AddressModel %r>" % self.streetName
+        return "<AddressModel %r>" % self.street_name

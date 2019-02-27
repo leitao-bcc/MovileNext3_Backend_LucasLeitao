@@ -1,6 +1,7 @@
 from datetime import datetime
+
 from app import db
-from app.models.base import BaseModel
+from app.models.base_model import BaseModel
 from app.validators.datetime_validator import is_valid_datetime_format
 
 
@@ -19,16 +20,17 @@ class OrderModel(db.Model, BaseModel):
 
     address_id = db.Column(db.Integer, db.ForeignKey('addresses.id'),
                            nullable=False)
-    deliveryAddress = db.relationship('AddressModel')
+    delivery_address = db.relationship('AddressModel')
 
     created_at = db.Column(db.DateTime, nullable=False)
-    deliveryDateTime = db.Column(db.DateTime, nullable=False)
+    delivery_date_time = db.Column(db.DateTime, nullable=False)
 
     def __init__(self, delivery_datetime):
         if not is_valid_datetime_format(delivery_datetime):
-            raise ValueError("Order DeliveryDatetime {}".format(delivery_datetime))
+            raise ValueError(
+                "Order DeliveryDatetime {}".format(delivery_datetime))
 
-        self.deliveryDateTime = delivery_datetime
+        self.delivery_date_time = delivery_datetime
         self.created_at = datetime.now()
 
     def __repr__(self):
