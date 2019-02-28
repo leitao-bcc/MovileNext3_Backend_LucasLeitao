@@ -1,3 +1,5 @@
+import os
+import requests
 from flask_restful import Resource, reqparse
 
 
@@ -7,4 +9,6 @@ class AuthResource(Resource):
     parser.add_argument('password', type=str, required=True)
 
     def post(self):
-        pass
+        host = os.environ.get('IFOOD_ENDPOINT')
+        url = host + '/auth/login'
+        return requests.request("POST", url, data={}, headers={})
