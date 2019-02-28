@@ -1,5 +1,7 @@
 from flask_restful import Resource, reqparse
 
+from app.data.auth_data import AUTH_DATA
+
 
 class AuthResource(Resource):
     parser = reqparse.RequestParser()
@@ -7,4 +9,4 @@ class AuthResource(Resource):
     parser.add_argument('password', type=str, required=True)
 
     def post(self):
-        pass
+        return AUTH_DATA

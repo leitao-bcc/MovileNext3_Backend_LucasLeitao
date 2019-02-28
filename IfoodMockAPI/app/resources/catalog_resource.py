@@ -1,8 +1,6 @@
 from flask_restful import Resource, reqparse
 
-json_catalog = """
-
-"""
+from app.data.catalog_data import CATALOG_DATA
 
 
 class CatalogResource(Resource):
@@ -19,4 +17,4 @@ class CatalogResource(Resource):
     parser.add_argument('longitude', type=str, required=True)
 
     def post(self):
-        return json_catalog
+        return CATALOG_DATA

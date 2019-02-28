@@ -11,5 +11,4 @@ while true; do
     sleep 5
 done
 
-flask translate compile
-exec gunicorn -b :5000 --access-logfile - --error-logfile - scheduled_delivery.py:app
+exec gunicorn -b :5000 --access-logfile - --error-logfile - scheduled_delivery:app

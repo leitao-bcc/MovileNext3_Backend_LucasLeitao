@@ -17,6 +17,11 @@ from app.models import address_model, category_model, customer_model, \
     item_model, merchant_model, office_hour_model, order_model, order_item, \
     phone_model
 
+api.add_resource(CatalogResource, '/catalog')
+api.add_resource(MerchantResource, '/merchant/<string:merchant_id>')
+api.add_resource(AuthResource, '/auth/login')
+api.add_resource(OrderResource, '/order/<string:order_id>')
+
 
 def create_app():
     app = Flask(__name__)
@@ -28,10 +33,5 @@ def create_app():
     migrate.init_app(app, db)
 
     api.init_app(app)
-
-    api.add_resource(CatalogResource, '/catalog')
-    api.add_resource(MerchantResource, '/merchant/<string:merchant_id>')
-    api.add_resource(AuthResource, '/auth/login')
-    api.add_resource(OrderResource, '/order/<string:order_id>')
 
     return app
