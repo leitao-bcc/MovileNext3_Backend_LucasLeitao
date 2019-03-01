@@ -29,3 +29,4 @@ ScheduledDeliveryWebApplication/app/__pycache__/
 ScheduledDeliveryWebApplication/app/models/__pycache__/
 ScheduledDeliveryWebApplication/venv/
 IfoodMockAPI/venv/
+ScheduledJobsWorker/venv/
