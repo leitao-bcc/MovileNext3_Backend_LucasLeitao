@@ -1,10 +1,6 @@
-FROM python:3.6-alpine
+FROM python:3.6.8-jessie
 
-RUN adduser -D flaskuser
-
-RUN apk update && \
-    apk add --virtual build-deps gcc python-dev musl-dev && \
-    apk add postgresql-dev
+RUN adduser flaskuser
 
 WORKDIR /home/www
 

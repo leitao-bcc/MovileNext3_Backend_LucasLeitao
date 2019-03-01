@@ -1,6 +1,6 @@
-FROM python:3.6-alpine
+FROM python:3.6-jessie
 
-RUN adduser -D flaskuser
+RUN adduser flaskuser
 
 WORKDIR /home/www
 

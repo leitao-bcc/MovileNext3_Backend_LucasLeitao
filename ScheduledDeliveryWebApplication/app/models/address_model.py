@@ -19,8 +19,8 @@ class AddressModel(db.Model, BaseModel):
     street_number = db.Column(db.String(10))
     postal_code = db.Column(db.String(10), nullable=False)
     complement = db.Column(db.String(45))
-    latitude = db.Column(db.Float(precision="3,9"), nullable=False)
-    longitude = db.Column(db.Float(precision="3,9"), nullable=False)
+    latitude = db.Column(db.Float(9), nullable=False)
+    longitude = db.Column(db.Float(9), nullable=False)
 
     def __init__(self, country, state, city, neighborhood, street_name,
                  street_number, postal_code, complement,

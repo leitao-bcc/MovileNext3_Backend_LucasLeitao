@@ -22,7 +22,7 @@ class MerchantModel(db.Model, BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(45), nullable=False)
     description = db.Column(db.Text)
-    rating = db.Column(db.Float(precision="1,2"))
+    rating = db.Column(db.Float(2))
 
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'),
                             nullable=False)

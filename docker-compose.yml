@@ -10,6 +10,8 @@ services:
       POSTGRES_PASSWORD: flaskapp
     volumes:
       - database_data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
 
   scheduled-delivery:
     build: ./ScheduledDeliveryWebApplication
@@ -26,7 +28,7 @@ services:
       DB_HOST: 'db:5432'
       DB_USER: flaskapp
       DB_PASS: flaskapp
-      DB_NAME: app
+      DB_NAME: flaskapp
 
   ifood-mock-api:
     build: ./IfoodMockAPI
