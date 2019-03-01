@@ -1,5 +1,7 @@
 from flask_restful import Resource
 
+from app.providers.ifood_provider import IfoodProvider
+
 
 class OrderResource(Resource):
 
@@ -7,4 +9,6 @@ class OrderResource(Resource):
         pass
 
     def put(self, order_id):
-        pass
+        provider = IfoodProvider()
+
+        return provider.post_order({})
