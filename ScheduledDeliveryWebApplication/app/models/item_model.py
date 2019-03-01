@@ -38,3 +38,10 @@ class ItemModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<ItemModel %r>" % self.name
+
+    def to_json(self):
+        return {
+            "name": self.name,
+            "price": self.price,
+            "section": self.section
+        }

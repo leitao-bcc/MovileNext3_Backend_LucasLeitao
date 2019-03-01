@@ -35,3 +35,14 @@ class OrderModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<OrderModel %r>" % self.id
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "customer": self.customer.to_json() if self.customer else None,
+            "merchant": self.merchant.to_json() if self.merchant else None,
+            "deliveryAddress": self.delivery_address.to_json() if self.delivery_address else None,
+            "createdAt": self.created_at,
+            "deliveryDateTime": self.delivery_date_time
+        }
+

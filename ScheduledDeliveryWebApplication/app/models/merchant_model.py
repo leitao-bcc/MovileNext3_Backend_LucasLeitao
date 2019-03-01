@@ -56,3 +56,17 @@ class MerchantModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<MerchantModel %r>" % self.name
+
+    def to_json(self):
+        return  {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "rating": self.rating,
+            "category": self.category.json() if self.category else None,
+            "phones": [phone.to_json() for phone in self.phones.all()],
+            "officeHours": [],
+            "address": self.address.to_json() if self.address else None
+        }
+
+

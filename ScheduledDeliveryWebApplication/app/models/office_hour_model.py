@@ -38,3 +38,11 @@ class OfficeHourModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<OfficeHourModel %r>" % self.merchant.name
+
+    def to_json(self):
+        return {
+            "weekDay": self.week_day,
+            "startTime": self.start_time,
+            "endTime": self.end_time
+        }
+

@@ -17,3 +17,8 @@ class CategoryModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<CategoryModel %r>" % self.name
+
+    def to_json(self):
+        return {
+            "name": self.name
+        }

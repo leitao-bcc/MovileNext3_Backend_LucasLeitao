@@ -71,3 +71,17 @@ class AddressModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<AddressModel %r>" % self.street_name
+
+    def to_json(self):
+        return {
+            "country": self.country,
+            "state": self.state,
+            "city": self.city,
+            "neighborhood": self.neighborhood,
+            "streetName": self.street_name,
+            "streetNumber": self.street_number,
+            "postalCode": self.postal_code,
+            "complement": self.complement,
+            "latitude": self.latitude,
+            "longitude": self.longitude
+        }

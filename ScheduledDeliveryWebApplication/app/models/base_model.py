@@ -10,3 +10,6 @@ class BaseModel:
     def delete_from_db(self):
         db.session.delete(self)
         db.session.commit()
+
+    def to_json(self):
+        raise NotImplementedError()

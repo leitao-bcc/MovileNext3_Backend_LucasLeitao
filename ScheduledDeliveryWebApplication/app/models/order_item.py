@@ -55,3 +55,15 @@ class OrderItemModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<OrderItemModel %r>" % self.id
+
+    def to_json(self):
+        return {
+            "name": self.name,
+            "price": self.price,
+            "discount": self.discount,
+            "quantity": self.quantity,
+            "addition": self.addition,
+            "observations": self.observations
+        }
+
+

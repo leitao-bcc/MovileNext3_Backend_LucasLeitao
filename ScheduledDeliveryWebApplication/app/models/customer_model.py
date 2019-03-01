@@ -36,3 +36,12 @@ class CustomerModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<CustomerModel %r>" % self.name
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "taxPayerIdentificationNumber": self.tax_payer_identification_number,
+            "email": self.email,
+            "phone": self.phone.to_json() if self.phone else None
+        }
