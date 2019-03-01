@@ -1,7 +1,7 @@
 from flask_restful import Resource
 
+import app.transformers as transformers
 from app.providers.ifood_provider import IfoodProvider
-from app.transformers.ifood_transform import IfoodTransform
 
 
 class MerchantResource(Resource):
@@ -14,7 +14,7 @@ class MerchantResource(Resource):
         if not provider_response:
             return '', 404
 
-        transform = IfoodTransform()
+        transform = transformers.ifood_transform.IfoodTransform()
 
         merchant = transform.transform_merchant(provider_response)
 

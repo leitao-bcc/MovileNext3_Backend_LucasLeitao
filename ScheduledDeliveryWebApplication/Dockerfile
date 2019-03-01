@@ -2,6 +2,10 @@ FROM python:3.6-alpine
 
 RUN adduser -D flaskuser
 
+RUN apk update && \
+    apk add --virtual build-deps gcc python-dev musl-dev && \
+    apk add postgresql-dev
+
 WORKDIR /home/www
 
 COPY requirements.txt requirements.txt

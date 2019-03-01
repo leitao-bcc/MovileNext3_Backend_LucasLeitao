@@ -1,19 +1,45 @@
 version: '3'
 
 services:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: flaskapp
+      POSTGRES_PASSWORD: flaskapp
+    volumes:
+      - database_data:/var/lib/postgresql/data
 
-    scheduled-delivery:
-        build: ./ScheduledDeliveryWebApplication
-        ports:
-          - "8000:5000"
-        depends_on:
-          - ifood-mock-api
-        restart: always
-        environment:
-          IFOOD_ENDPOINT: http://ifood-mock-api
+  scheduled-delivery:
+    build: ./ScheduledDeliveryWebApplication
+    ports:
+      - 8000:5000
+    depends_on:
+      - ifood-mock-api
+      - db
+    restart: always
+    networks:
+      - mynetwork
+    environment:
+      IFOOD_ENDPOINT: http://ifood-mock-api:8080
+      DB_HOST: 'db:5432'
+      DB_USER: flaskapp
+      DB_PASS: flaskapp
+      DB_NAME: app
 
-    ifood-mock-api:
-        build: ./IfoodMockAPI
-        ports:
-          - "8080:5000"
-        restart: always
+  ifood-mock-api:
+    build: ./IfoodMockAPI
+    ports:
+      - 8080:5000
+    restart: always
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: "bridge"
+
+volumes:
+  database_data:
+    driver: local

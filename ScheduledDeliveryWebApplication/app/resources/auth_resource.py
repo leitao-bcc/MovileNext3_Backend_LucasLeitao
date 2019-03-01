@@ -1,7 +1,7 @@
 from flask_restful import Resource, reqparse
 
+import app.transformers as transformers
 from app.providers.ifood_provider import IfoodProvider
-from app.transformers.ifood_transform import IfoodTransform
 
 
 class AuthResource(Resource):
@@ -20,7 +20,7 @@ class AuthResource(Resource):
         if not provider_response:
             return '', 400
 
-        transform = IfoodTransform()
+        transform = transformers.ifood_transform.IfoodTransform()
 
         customer = transform.transform_login(provider_response)
 

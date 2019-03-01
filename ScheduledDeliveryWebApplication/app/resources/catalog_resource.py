@@ -1,7 +1,7 @@
 from flask_restful import Resource, reqparse
 
+import app.transformers as transformers
 from app.providers.ifood_provider import IfoodProvider
-from app.transformers.ifood_transform import IfoodTransform
 
 
 class CatalogResource(Resource):
@@ -28,7 +28,7 @@ class CatalogResource(Resource):
         if not provider_response:
             return '', 404
 
-        transform = IfoodTransform()
+        transform = transformers.ifood_transform.IfoodTransform()
 
         merchant_list = transform.transform_catalog(provider_response)
 

@@ -1,3 +1,4 @@
+import os
 import requests
 
 from app.providers.base_provider import BaseProvider
@@ -6,7 +7,7 @@ from app.providers.base_provider import BaseProvider
 class IfoodProvider(BaseProvider):
 
     def __init__(self):
-        self.host = 'http://0.0.0.0:8080'
+        self.host = os.environ.get('IFOOD_ENDPOINT')
 
     def run(self, path, method, data={}, headers={}):
         url = self.host + path
