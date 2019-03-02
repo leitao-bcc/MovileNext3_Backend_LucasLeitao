@@ -24,7 +24,7 @@ services:
     networks:
       - mynetwork
     environment:
-      IFOOD_ENDPOINT: http://ifood-mock-api:8080
+      IFOOD_ENDPOINT: 'http://ifood-mock-api:5000'
       DB_HOST: 'db:5432'
       DB_USER: flaskapp
       DB_PASS: flaskapp

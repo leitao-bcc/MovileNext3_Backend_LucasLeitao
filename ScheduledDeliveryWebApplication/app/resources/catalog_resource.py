@@ -32,4 +32,4 @@ class CatalogResource(Resource):
 
         merchant_list = transform.transform_catalog(provider_response)
 
-        return merchant_list
+        return [merchant.to_json() for merchant in merchant_list]

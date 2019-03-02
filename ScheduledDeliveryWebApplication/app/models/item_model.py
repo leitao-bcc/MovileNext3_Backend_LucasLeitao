@@ -21,7 +21,7 @@ class ItemModel(db.Model, BaseModel):
         if is_none_or_empty(name):
             raise ValueError("Item Name {}".format(name))
 
-        if is_integer(price):
+        if not is_integer(price):
             raise ValueError("Item Price {}".format(price))
 
         price = int(price)

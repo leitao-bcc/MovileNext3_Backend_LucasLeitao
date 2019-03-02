@@ -33,8 +33,7 @@ class MerchantModel(db.Model, BaseModel):
     address = db.relationship('AddressModel')
 
     phones = db.relationship('PhoneModel',
-                             secondary=merchant_phones,
-                             lazy='subquery')
+                             secondary=merchant_phones)
 
     def __init__(self, name, description, rating):
         if is_none_or_empty(name):
@@ -63,9 +62,10 @@ class MerchantModel(db.Model, BaseModel):
             "name": self.name,
             "description": self.description,
             "rating": self.rating,
-            "category": self.category.json() if self.category else None,
-            "phones": [phone.to_json() for phone in self.phones.all()],
-            "officeHours": [],
+            "category": self.category.to_json() if self.category else None,
+            "phones": [phone.to_json() for phone in self.phones],
+            "officeHours": [office_hour.to_json() for office_hour in
+                            self.office_hours],
             "address": self.address.to_json() if self.address else None
         }
 

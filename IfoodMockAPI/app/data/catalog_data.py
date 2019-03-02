@@ -12,38 +12,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Qui",
-                "startTime": "04:59:18 +03:00",
-                "endTime": "05:37:12 +03:00"
+                "startTime": "04:59:18",
+                "endTime": "05:37:12"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "06:30:50 +03:00",
-                "endTime": "11:29:51 +02:00"
+                "startTime": "06:30:50",
+                "endTime": "11:29:51"
             },
             {
                 "weekDay": "Ter",
-                "startTime": "06:09:40 +02:00",
-                "endTime": "05:20:27 +03:00"
+                "startTime": "05:20:27",
+                "endTime": "06:09:40"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "02:45:57 +02:00",
-                "endTime": "05:01:45 +03:00"
+                "startTime": "02:45:57",
+                "endTime": "05:01:45"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "03:22:42 +03:00",
-                "endTime": "02:34:57 +03:00"
+                "startTime": "02:34:57",
+                "endTime": "03:22:42"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "04:17:18 +02:00",
-                "endTime": "10:25:26 +02:00"
+                "startTime": "04:17:18",
+                "endTime": "10:25:26"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "03:21:05 +03:00",
-                "endTime": "06:20:58 +02:00"
+                "startTime": "03:21:05",
+                "endTime": "06:20:58"
             }
         ],
         "address": {
@@ -71,38 +71,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Sab",
-                "startTime": "04:03:32 +02:00",
-                "endTime": "03:07:11 +02:00"
+                "startTime": "03:07:11",
+                "endTime": "04:03:32"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "04:05:55 +03:00",
-                "endTime": "12:20:53 +03:00"
+                "startTime": "04:05:55",
+                "endTime": "12:20:53"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "07:37:07 +03:00",
-                "endTime": "09:44:37 +02:00"
+                "startTime": "07:37:07",
+                "endTime": "09:44:37"
             },
             {
                 "weekDay": "Ter",
-                "startTime": "03:52:02 +03:00",
-                "endTime": "07:43:44 +03:00"
+                "startTime": "03:52:02",
+                "endTime": "07:43:44"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "08:24:24 +03:00",
-                "endTime": "04:19:00 +02:00"
+                "startTime": "04:19:00",
+                "endTime": "08:24:24"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "04:56:18 +03:00",
-                "endTime": "03:43:35 +02:00"
+                "startTime": "03:43:35",
+                "endTime": "04:56:18"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "02:27:30 +02:00",
-                "endTime": "02:05:51 +02:00"
+                "startTime": "02:05:51",
+                "endTime": "02:27:30"
             }
         ],
         "address": {
@@ -132,38 +132,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Dom",
-                "startTime": "01:50:48 +02:00",
-                "endTime": "07:28:23 +03:00"
+                "startTime": "01:50:48",
+                "endTime": "07:28:23"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "11:30:13 +02:00",
-                "endTime": "05:05:09 +03:00"
+                "startTime": "05:05:09",
+                "endTime": "11:30:13"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "03:20:10 +02:00",
-                "endTime": "11:59:40 +02:00"
+                "startTime": "03:20:10",
+                "endTime": "11:59:40"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "12:42:49 +02:00",
-                "endTime": "08:30:11 +02:00"
+                "startTime": "08:30:11",
+                "endTime": "12:42:49"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "05:19:02 +02:00",
-                "endTime": "06:52:14 +03:00"
+                "startTime": "05:19:02",
+                "endTime": "06:52:14"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "03:34:46 +02:00",
-                "endTime": "03:22:23 +02:00"
+                "startTime": "03:22:23",
+                "endTime": "03:34:46"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "03:40:57 +03:00",
-                "endTime": "06:42:14 +02:00"
+                "startTime": "03:40:57",
+                "endTime": "06:42:14"
             }
         ],
         "address": {
@@ -191,38 +191,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Seg",
-                "startTime": "03:20:14 +03:00",
-                "endTime": "09:40:37 +02:00"
+                "startTime": "03:20:14",
+                "endTime": "09:40:37"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "12:29:16 +03:00",
-                "endTime": "01:11:28 +03:00"
+                "startTime": "01:11:28",
+                "endTime": "12:29:16"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "03:13:12 +03:00",
-                "endTime": "10:11:47 +03:00"
+                "startTime": "03:13:12",
+                "endTime": "10:11:47"
             },
             {
                 "weekDay": "Ter",
-                "startTime": "08:43:38 +03:00",
-                "endTime": "06:35:54 +03:00"
+                "startTime": "06:35:54",
+                "endTime": "08:43:38"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "03:53:22 +02:00",
-                "endTime": "03:31:14 +02:00"
+                "startTime": "03:31:14",
+                "endTime": "03:53:22"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "12:39:52 +03:00",
-                "endTime": "08:32:26 +03:00"
+                "startTime": "08:32:26",
+                "endTime": "12:39:52"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "08:20:33 +02:00",
-                "endTime": "04:34:19 +02:00"
+                "startTime": "04:34:19",
+                "endTime": "08:20:33"
             }
         ],
         "address": {
@@ -252,38 +252,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Qua",
-                "startTime": "06:09:59 +03:00",
-                "endTime": "05:57:36 +03:00"
+                "startTime": "05:57:36",
+                "endTime": "06:09:59"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "02:16:10 +03:00",
-                "endTime": "01:00:49 +03:00"
+                "startTime": "01:00:49",
+                "endTime": "02:16:10"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "02:12:02 +03:00",
-                "endTime": "08:40:45 +03:00"
+                "startTime": "02:12:02",
+                "endTime": "08:40:45"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "06:37:36 +03:00",
-                "endTime": "12:48:26 +02:00"
+                "startTime": "06:37:36",
+                "endTime": "12:48:26"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "06:27:48 +03:00",
-                "endTime": "09:47:38 +02:00"
+                "startTime": "06:27:48",
+                "endTime": "09:47:38"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "08:42:06 +03:00",
-                "endTime": "06:33:27 +03:00"
+                "startTime": "06:33:27",
+                "endTime": "08:42:06"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "04:34:09 +03:00",
-                "endTime": "07:08:37 +03:00"
+                "startTime": "04:34:09",
+                "endTime": "07:08:37"
             }
         ],
         "address": {
@@ -311,38 +311,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Ter",
-                "startTime": "10:45:48 +03:00",
-                "endTime": "05:05:55 +03:00"
+                "startTime": "05:05:55",
+                "endTime": "10:45:48"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "08:08:00 +02:00",
-                "endTime": "02:53:54 +03:00"
+                "startTime": "02:53:54",
+                "endTime": "08:08:00"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "02:41:46 +02:00",
-                "endTime": "01:41:02 +02:00"
+                "startTime": "01:41:02",
+                "endTime": "02:41:46"
             },
             {
                 "weekDay": "Ter",
-                "startTime": "07:27:26 +02:00",
-                "endTime": "05:21:09 +02:00"
+                "startTime": "05:21:09",
+                "endTime": "07:27:26"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "04:12:05 +02:00",
-                "endTime": "02:21:25 +03:00"
+                "startTime": "02:21:25",
+                "endTime": "04:12:05"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "03:40:55 +03:00",
-                "endTime": "03:54:07 +02:00"
+                "startTime": "03:40:55",
+                "endTime": "03:54:07"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "12:14:36 +03:00",
-                "endTime": "01:57:21 +02:00"
+                "startTime": "01:57:21",
+                "endTime": "12:14:36"
             }
         ],
         "address": {
@@ -370,38 +370,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Sab",
-                "startTime": "07:55:59 +03:00",
-                "endTime": "06:26:20 +03:00"
+                "startTime": "06:26:20",
+                "endTime": "07:55:59"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "02:28:20 +03:00",
-                "endTime": "01:08:21 +03:00"
+                "startTime": "01:08:21",
+                "endTime": "02:28:20"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "01:32:46 +03:00",
-                "endTime": "01:26:57 +03:00"
+                "startTime": "01:26:57",
+                "endTime": "01:32:46"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "08:21:36 +03:00",
-                "endTime": "04:14:50 +03:00"
+                "startTime": "04:14:50",
+                "endTime": "08:21:36"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "11:37:09 +03:00",
-                "endTime": "11:57:03 +03:00"
+                "startTime": "11:37:09",
+                "endTime": "11:57:03"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "11:35:59 +03:00",
-                "endTime": "11:18:20 +02:00"
+                "startTime": "11:18:20",
+                "endTime": "11:35:59"
             },
             {
                 "weekDay": "Ter",
-                "startTime": "04:28:14 +03:00",
-                "endTime": "04:33:17 +02:00"
+                "startTime": "04:28:14",
+                "endTime": "04:33:17"
             }
         ],
         "address": {
@@ -429,38 +429,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Ter",
-                "startTime": "08:52:50 +02:00",
-                "endTime": "01:53:30 +03:00"
+                "startTime": "01:53:30",
+                "endTime": "08:52:50"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "06:59:41 +03:00",
-                "endTime": "11:42:45 +03:00"
+                "startTime": "06:59:41",
+                "endTime": "11:42:45"
             },
             {
                 "weekDay": "Qui",
-                "startTime": "03:02:46 +03:00",
-                "endTime": "04:45:50 +03:00"
+                "startTime": "03:02:46",
+                "endTime": "04:45:50"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "09:19:43 +03:00",
-                "endTime": "10:34:46 +03:00"
+                "startTime": "09:19:43",
+                "endTime": "10:34:46"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "10:43:44 +03:00",
-                "endTime": "11:03:15 +03:00"
+                "startTime": "10:43:44",
+                "endTime": "11:03:15"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "05:43:42 +02:00",
-                "endTime": "07:05:00 +02:00"
+                "startTime": "05:43:42",
+                "endTime": "07:05:00"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "11:47:25 +03:00",
-                "endTime": "08:57:30 +03:00"
+                "startTime": "08:57:30",
+                "endTime": "11:47:25"
             }
         ],
         "address": {
@@ -488,38 +488,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Qui",
-                "startTime": "11:57:58 +03:00",
-                "endTime": "04:41:41 +02:00"
+                "startTime": "04:41:41",
+                "endTime": "11:57:58"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "03:30:29 +03:00",
-                "endTime": "09:49:35 +03:00"
+                "startTime": "03:30:29",
+                "endTime": "09:49:35"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "02:31:59 +02:00",
-                "endTime": "04:42:03 +03:00"
+                "startTime": "02:31:59",
+                "endTime": "04:42:03"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "04:58:46 +02:00",
-                "endTime": "03:24:33 +03:00"
+                "startTime": "03:24:33",
+                "endTime": "04:58:46"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "02:43:25 +03:00",
-                "endTime": "09:23:24 +02:00"
+                "startTime": "02:43:25",
+                "endTime": "09:23:24"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "11:06:41 +02:00",
-                "endTime": "11:17:01 +03:00"
+                "startTime": "11:06:41",
+                "endTime": "11:17:01"
             },
             {
                 "weekDay": "Qua",
-                "startTime": "09:28:07 +02:00",
-                "endTime": "06:27:03 +02:00"
+                "startTime": "06:27:03",
+                "endTime": "09:28:07"
             }
         ],
         "address": {
@@ -549,38 +549,38 @@ CATALOG_DATA = [
         "officeHours": [
             {
                 "weekDay": "Qui",
-                "startTime": "07:56:38 +03:00",
-                "endTime": "04:34:03 +03:00"
+                "startTime": "04:34:03",
+                "endTime": "07:56:38"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "11:48:14 +03:00",
-                "endTime": "11:31:34 +02:00"
+                "startTime": "11:31:34",
+                "endTime": "11:48:14"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "07:24:58 +02:00",
-                "endTime": "07:02:27 +03:00"
+                "startTime": "07:02:27",
+                "endTime": "07:24:58"
             },
             {
                 "weekDay": "Seg",
-                "startTime": "11:46:29 +02:00",
-                "endTime": "03:43:13 +02:00"
+                "startTime": "03:43:13",
+                "endTime": "11:46:29"
             },
             {
                 "weekDay": "Sex",
-                "startTime": "06:16:36 +03:00",
-                "endTime": "04:40:24 +03:00"
+                "startTime": "04:40:24",
+                "endTime": "06:16:36"
             },
             {
                 "weekDay": "Dom",
-                "startTime": "07:00:42 +02:00",
-                "endTime": "01:27:45 +03:00"
+                "startTime": "01:27:45",
+                "endTime": "07:00:42"
             },
             {
                 "weekDay": "Sab",
-                "startTime": "04:20:43 +03:00",
-                "endTime": "02:57:35 +03:00"
+                "startTime": "02:57:35",
+                "endTime": "04:20:43"
             }
         ],
         "address": {

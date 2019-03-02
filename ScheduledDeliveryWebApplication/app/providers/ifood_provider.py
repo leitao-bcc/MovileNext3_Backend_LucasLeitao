@@ -23,7 +23,7 @@ class IfoodProvider(BaseProvider):
         return self.run('/catalog', 'POST', kwargs)
 
     def get_merchant(self, merchant_id):
-        path = '/merchant' + str(merchant_id)
+        path = '/merchant/' + str(merchant_id)
         return self.run(path, 'GET')
 
     def login(self, username, password):
@@ -31,4 +31,4 @@ class IfoodProvider(BaseProvider):
         return self.run('/auth/login', 'POST', data)
 
     def post_order(self, **kwargs):
-        return self.run('/catalog', 'POST', kwargs)
+        return self.run('/order', 'POST', kwargs)

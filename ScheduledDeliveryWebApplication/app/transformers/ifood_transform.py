@@ -1,3 +1,5 @@
+import json
+
 from app.models.address_model import AddressModel
 from app.models.category_model import CategoryModel
 from app.models.customer_model import CustomerModel
@@ -11,6 +13,8 @@ from app.transformers.base_transform import BaseTransform
 class IfoodTransform(BaseTransform):
 
     def transform_catalog(self, data):
+        data = json.loads(data)
+
         merchant_list = []
         for item in data:
             try:
@@ -28,7 +32,7 @@ class IfoodTransform(BaseTransform):
                     phone_list.append(
                         PhoneModel(phone_str[:2], phone_str[2:])
                     )
-                merchant_obj.phones.add(phone_list)
+                merchant_obj.phones.extend(phone_list)
 
                 for office_hours_dict in item.get('officeHours', []):
                     office_hours_obj = OfficeHourModel(
@@ -53,6 +57,7 @@ class IfoodTransform(BaseTransform):
                 )
                 merchant_obj.address = address_obj
 
+                merchant_obj.save_to_db()
                 merchant_list.append(merchant_obj)
 
             except ValueError:
@@ -61,6 +66,8 @@ class IfoodTransform(BaseTransform):
         return merchant_list
 
     def transform_merchant(self, data):
+        data = json.loads(data)
+
         item_list = []
         for item_dict in data.get('items', []):
             try:
@@ -76,6 +83,8 @@ class IfoodTransform(BaseTransform):
         return item_list
 
     def transform_login(self, data):
+        data = json.loads(data)
+
         try:
             customer_obj = CustomerModel(
                 data.get('name'),
@@ -86,6 +95,8 @@ class IfoodTransform(BaseTransform):
             phone_str = data.get('phone')
             phone_obj = PhoneModel(phone_str[:2], phone_str[2:])
             customer_obj.phone = phone_obj
+
+            customer_obj.save_to_db()
 
             return customer_obj
         except ValueError:

@@ -27,3 +27,6 @@ class PhoneModel(db.Model, BaseModel):
 
     def __repr__(self):
         return "<PhoneModel %r>" % self.number
+
+    def to_json(self):
+        return "{} {}".format(self.ddd, self.number)

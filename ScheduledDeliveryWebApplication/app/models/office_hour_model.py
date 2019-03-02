@@ -1,7 +1,9 @@
+from datetime import datetime
+
 from app import db
 from app.models.base_model import BaseModel
 from app.validators.datetime_validator import is_valid_week_day, \
-    is_valid_time_format
+    is_valid_time_format, TIME_FORMAT
 
 
 class OfficeHourModel(db.Model, BaseModel):
@@ -33,8 +35,8 @@ class OfficeHourModel(db.Model, BaseModel):
                     start_time, end_time))
 
         self.week_day = week_day
-        self.start_time = start_time
-        self.end_time = end_time
+        self.start_time = datetime.strptime(start_time, TIME_FORMAT)
+        self.end_time = datetime.strptime(end_time, TIME_FORMAT)
 
     def __repr__(self):
         return "<OfficeHourModel %r>" % self.merchant.name
@@ -42,7 +44,7 @@ class OfficeHourModel(db.Model, BaseModel):
     def to_json(self):
         return {
             "weekDay": self.week_day,
-            "startTime": self.start_time,
-            "endTime": self.end_time
+            "startTime": self.start_time.strftime(TIME_FORMAT),
+            "endTime": self.end_time.strftime(TIME_FORMAT)
         }
 

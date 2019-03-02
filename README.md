@@ -62,7 +62,93 @@ Aplicação criada para simular as respostas das APIs do IFood. Possui 4 APIs Re
 
 #### Exemplo de uso
 
-CHAMADAS DE API
+- API de catálogo
+
+```
+curl -X POST \
+  http://0.0.0.0:8000/catalog \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+  "country": "Belgium",
+  "state": "Alaska",
+  "city": "Bentley",
+  "neighborhood": "ut",
+  "streetName": "Wilson Street",
+  "streetNumber": 934,
+  "postalCode": 70914730,
+  "complement": "",
+  "latitude": 64.653927,
+  "longitude": 94.998853,
+  "deliveryDateTime": "2019-03-20T19:00:00 +03:00"
+}'
+```
+
+- API de menu por restautante
+
+```
+curl -X GET \
+  http://0.0.0.0:8000/merchant/10 \
+  -H 'cache-control: no-cache'
+```
+
+- API de login
+
+```
+curl -X POST \
+  http://0.0.0.0:8000/auth/login \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"username": "incididunt",
+	"password": "excepteur"
+}'
+```
+
+- API de agendamento de pedido
+
+```
+curl -X POST \
+  http://0.0.0.0:8000/order \
+  -H 'Content-Type: application/json' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"customerId": 1,
+	"merchantId": 10,
+	"deliveryAddress": {
+        "country": "Saudi Arabia",
+        "state": "Virgin Islands",
+        "city": "Ribera",
+        "neighborhood": "eu",
+        "streetName": "Hopkins Street",
+        "streetNumber": 887,
+        "postalCode": 88634912,
+        "complement": "",
+        "latitude": 54.954462,
+        "longitude": 120.48691
+    },
+    "deliveryDateTime": "2019-03-20T19:00:00.029810",
+    "items": [
+    	{
+	      "name": "sunt",
+	      "price": 5089,
+	      "discount": 528,
+	      "quantity": 35,
+	      "addition": "",
+	      "observations": ""
+    	}
+	]
+}'
+```
+
+- API para criar o pedido
+
+```
+curl -X POST \
+  http://0.0.0.0:8000/order/5 \
+  -H 'cache-control: no-cache'
+```
+
 
 ### Instruções de Execução
 

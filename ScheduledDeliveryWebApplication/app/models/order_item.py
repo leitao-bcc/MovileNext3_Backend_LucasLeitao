@@ -24,7 +24,7 @@ class OrderItemModel(db.Model, BaseModel):
         if is_none_or_empty(name):
             raise ValueError("OrderItem Name {}".format(name))
 
-        if is_integer(price):
+        if not is_integer(price):
             raise ValueError("OrderItem Price {}".format(price))
 
         price = int(price)
@@ -39,7 +39,7 @@ class OrderItemModel(db.Model, BaseModel):
             if discount > price:
                 raise ValueError("OrderItem Price must be greater than Discount, {} - {}".format(price, discount))
 
-        if is_integer(quantity):
+        if not is_integer(quantity):
             raise ValueError("OrderItem Price {}".format(price))
 
         quantity = int(quantity)

@@ -1,5 +1,4 @@
-from app import db
-from app.models.base_model import BaseModel
+from app.models.base_model import BaseModel, db
 from app.validators.cep_validator import is_valid_cep
 from app.validators.coordinates_validator import is_valid_latitude, \
     is_valid_longitude
@@ -41,6 +40,7 @@ class AddressModel(db.Model, BaseModel):
         if is_none_or_empty(street_name):
             raise ValueError("Address StreetName {}".format(street_name))
 
+        postal_code = str(postal_code)
         if not is_valid_cep(postal_code):
             raise ValueError("Address PostalCode {}".format(postal_code))
 
