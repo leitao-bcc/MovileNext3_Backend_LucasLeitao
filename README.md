@@ -160,5 +160,5 @@ docker-compose up --build
 
 ## ToDo
 
-- Implemtação dos testes automátizados
+- Implemtação dos testes automatizados
 - Criação da task de envio de pedidos
